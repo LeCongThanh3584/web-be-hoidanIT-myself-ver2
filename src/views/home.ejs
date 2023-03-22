@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node JS T1</title>
+    <link rel="icon" href="/icons/logo_t1.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topnav">
+        <a class="active" href="/home">Home</a>
+        <a href="/upload">Upload File</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+    </header>
+
+    <div>
+      <div class="w3-container">
+        <h2>ListUsers Table</h2>
+
+        <table class="w3-table-all w3-hoverable">
+          <thead>
+            <tr class="w3-light-grey">
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let i = 0; i < dataUser.length; i++) {%>
+            <tr>
+              <td><%= dataUser[i].id %></td>
+              <td><%= dataUser[i].firstName %></td>
+              <td><%= dataUser[i].lastName %></td>
+              <td><%= dataUser[i].email %></td>
+              <td><%= dataUser[i].address %></td>
+              <td>
+                <button class="yellow">
+                  <a href="/details/user/<%= dataUser[i].id %>">Details</a>
+                </button>
+
+                <form action="/edit-user/<%= dataUser[i].id %>" method="GET">
+                  <button class="green" type="submit">Edit</button>
+                </form>
+
+                <form action="/delete-user" method="POST">
+                  <input
+                    type="text"
+                    name="userId"
+                    value="<%= dataUser[i].id%>"
+                    hidden
+                  />
+                  <button class="red" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      <div class="input-user">
+        <form action="/create-new-user" method="POST">
+          <h3><b>Create a new user</b></h3>
+          <div>
+            <label for="input_1">First Name:</label>
+            <input
+              name="firstName"
+              id="input_1"
+              type="text"
+              placeholder="Enter first name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="input_2">Last Name:</label>
+            <input
+              name="lastName"
+              id="input_2"
+              type="text"
+              placeholder="Enter last name"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="input_3">Email:</label>
+            <input
+              name="email"
+              id="input_3"
+              type="email"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="input_4">Address:</label>
+            <input
+              name="address"
+              id="input_4"
+              type="text"
+              placeholder="Enter address"
+              required
+            />
+          </div>
+
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <p style="text-align: center; color: red">
+        Powered by
+        <a href="https://www.facebook.com/Thanh.dlpfs" style="color: blue"
+          >Cong Thanh</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

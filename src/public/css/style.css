@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: crimson;
+    color: white;
+  }
+
+  .w3-table-all tbody button a{
+    text-decoration: none;
+  } 
+
+  .w3-table-all tbody button:hover {
+    opacity: 0.3;
+  }
+
+  .w3-table-all tbody tr td:last-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .w3-table-all tbody tr td:last-child form:nth-child(2){
+    margin: 0px 10px;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .green {
+    background-color: green;
+  }
+  
+  .red {
+    background-color: red;
+  }
+
+  table thead tr th, table tbody tr td {
+    text-align: center !important;
+  }
+  
+  .input-user {
+    text-align: center;
+  }
+
+  .input-user div {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+  }
+
+  .input-user div label {
+    min-width: 100px;
+  }
+
+  .input-user div button {
+    cursor: pointer;
+  }

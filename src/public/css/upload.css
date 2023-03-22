@@ -1,0 +1,23 @@
+.uploadFile {
+    margin-left: 30px;
+    font-size: large;
+}
+
+.uploadFile button {
+    margin-top: 15px;
+}
+
+.uploadFile button:hover {
+    cursor: pointer;
+}
+
+.singleFile, .multipleFile {
+    background-color: aliceblue;
+    margin-top: 15px;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.uploadFile h3 {
+    margin: 0px;
+}

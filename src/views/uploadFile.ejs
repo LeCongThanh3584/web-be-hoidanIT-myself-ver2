@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload File</title>
+    <link rel="icon" href="/icons/logo_t1.png" />
+    <link rel="stylesheet" href="/css/upload.css" />
+  </head>
+  <body>
+    <div class="uploadFile">
+      <div class="singleFile">
+        <form
+          action="upload-singleFile"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <div class="">
+            <h3>Upload single file here</h3>
+            <label for="">Tải file tại đây: </label> <br />
+            <input type="file" name="single-file" id="" />
+          </div>
+          <button type="submit">Upload</button>
+        </form>
+      </div>
+
+      <div class="multipleFile">
+        <form
+          action="upload-multipleFile"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          <div class="">
+            <h3>Upload multiple file here</h3>
+            <label for="">Tải file tại đây: </label> <br />
+            <input type="file" name="multiple-file" id="" multiple />
+          </div>
+          <button type="submit">Upload</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
